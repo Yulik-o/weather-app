@@ -19,6 +19,10 @@ function App() {
 
   return (
     <div className="app">
+      <div className="text_wrapper">
+        <h2 className="app_text">Your weather forecast</h2>
+        <p className="app_text_end">story begins here:</p>
+      </div>
       <div className="search">
         <input
           value={location}
@@ -45,7 +49,7 @@ function App() {
           <div className="bottom">
             <div className="feels">
               {data.main ? (
-                <p className="bold">{data.main.feels_like.toFixed()}°F</p>
+                <p className="bold">{data.main.feels_like.toFixed()}°C</p>
               ) : null}
               <p>Feels Like</p>
             </div>
