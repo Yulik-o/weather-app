@@ -1,11 +1,19 @@
-// import logo from './logo.svg';
-import "./App.css";
+// import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import WeatherSearch from "./components/WeatherSearch";
+import Home from "./pages/Home/Home";
+import NotFound from "./pages/NotFound/NotFound";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        {/* <img src={logo} className="App-logo" alt="logo" />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+      <WeatherSearch />
+      {/* <header className="App-header"> */}
+      {/* <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -17,7 +25,7 @@ function App() {
         >
           Learn React
         </a> */}
-      </header>
+      {/* </header> */}
     </div>
   );
 }
